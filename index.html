@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hildo Motos · Motos 0km e seminovas em São Luís</title>
+  <meta name="description" content="Motos 0km e seminovas em São Luís. Compra, venda e financiamento nas unidades Cohab e Vila Flamengo. Fale com a Hildo Motos no WhatsApp.">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta property="og:title" content="Hildo Motos · A loja diferente das iguais">
+  <meta property="og:description" content="Motos 0km e seminovas, compra, venda e financiamento em São Luís.">
+  <meta property="og:image" content="assets/img/naked.jpg">
+  <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-latin.woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/naked.jpg">
+  <link rel="stylesheet" href="css/style.css?v=19">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      d.classList.add("js");
+      try {
+        if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("motion");
+          if (!sessionStorage.getItem("hm-intro") && !location.hash) d.classList.add("intro-on");
+        }
+      } catch (e) {}
+      // if main.js never boots, never leave the shutter down or content hidden
+      setTimeout(function () { if (!window.__hmReady) d.classList.remove("intro-on", "motion"); }, 3000);
+    })();
+  </script>
+</head>
+<body>
+  <div class="intro" data-intro aria-hidden="true">
+    <div class="intro__sign">
+      <svg class="intro__mark" viewBox="0 0 48 56">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="miter" stroke-linecap="square">
+          <path pathLength="1" d="M3 3h42v27c0 12-10 19-21 23C13 49 3 42 3 30z"/>
+          <path pathLength="1" d="M13 18V9l6 5 5-7 5 7 6-5v9z"/>
+          <path pathLength="1" d="M13 24v16M13 32h8M21 24v16M27 40V24l4 8 4-8v16"/>
+        </g>
+      </svg>
+      <p class="intro__word"><span>Hildo</span> <span>Motos</span></p>
+    </div>
+  </div>
+
+  <a class="skip" href="#estoque">Pular para o estoque</a>
+
+  <!-- ============ HERO / VITRINE ============ -->
+  <header class="hero" id="topo">
+    <div class="stage" data-stage>
+      <img class="stage__img stage__img--base" data-stage-base src="assets/img/naked.jpg" alt="" fetchpriority="high">
+      <img class="stage__img stage__img--next" data-stage-next src="assets/img/naked.jpg" alt="">
+      <div class="stage__shade" aria-hidden="true"></div>
+      <div class="glass" data-glass aria-hidden="true"></div>
+      <span class="stage__tag" data-hero-tag>Imagem ilustrativa</span>
+    </div>
+
+    <nav class="topbar" aria-label="Principal">
+      <a class="brand" href="#topo" aria-label="Hildo Motos, início">
+        <svg class="brand__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+        <span class="brand__word"><span class="brand__hildo">Hildo</span><span class="brand__motos">Motos</span></span>
+      </a>
+      <ul class="topbar__links">
+        <li><a href="#estoque">Estoque</a></li>
+        <li><a href="#estoque" data-filter-link="0km">0km</a></li>
+        <li><a href="#estoque" data-filter-link="seminova">Seminovas</a></li>
+        <li><a href="#financiamento">Financiamento</a></li>
+        <li><a href="#vender">Vender minha moto</a></li>
+        <li><a href="#lojas">Lojas</a></li>
+      </ul>
+    </nav>
+
+    <div class="notch notch--top">
+      <button class="btn btn--outline" type="button" data-open-lojas>
+        <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+        <span class="hide-s">Falar no</span> WhatsApp
+      </button>
+    </div>
+
+    <div class="hero__copy">
+      <svg class="hero__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+      <h1 class="display hero__title">Diferente<br>das iguais</h1>
+      <p class="hero__lede">Motos 0km e seminovas. Compra, venda, consignação e financiamento em duas lojas em São Luís, com atendimento online e presencial.</p>
+
+      <div class="hero__model" data-hero-model aria-live="polite">
+        <p class="hero__model-name"><span data-hero-marca>Honda</span> <strong data-hero-modelo>CB 300F Twister</strong></p>
+        <p class="hero__model-spec num" data-hero-spec>2024 · 0km · 293 cc</p>
+      </div>
+
+      <div class="hero__actions">
+        <a class="btn btn--solid" data-hero-cta href="#" target="_blank" rel="noopener">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>
+          Quero esta moto
+        </a>
+        <a class="btn btn--ghost" href="#estoque">Ver estoque completo <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+
+    <div class="notch notch--rail">
+      <div class="rail" role="tablist" aria-label="Motos em destaque" data-rail></div>
+    </div>
+
+    <div class="notch notch--side" aria-hidden="true">
+      <a href="#estoque" tabindex="-1" class="side-scroll">Role para descobrir <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ ESTOQUE ============ -->
+    <section class="estoque" id="estoque" aria-labelledby="estoque-titulo">
+      <div class="estoque__head wrap">
+        <div>
+          <h2 class="display display--lg" id="estoque-titulo" data-reveal="wipe">Estoque</h2>
+          <p class="estoque__count num" data-count aria-live="polite"></p>
+        </div>
+        <div class="filters">
+          <div class="seg" role="radiogroup" aria-label="Condição" data-seg="condicao">
+            <button type="button" role="radio" aria-checked="true" data-value="todas">Todas</button>
+            <button type="button" role="radio" aria-checked="false" data-value="0km">0km</button>
+            <button type="button" role="radio" aria-checked="false" data-value="seminova">Seminovas</button>
+          </div>
+          <div class="seg seg--plain" role="radiogroup" aria-label="Estilo" data-seg="categoria">
+            <button type="button" role="radio" aria-checked="true" data-value="todas">Todos estilos</button>
+            <button type="button" role="radio" aria-checked="false" data-value="street">Street</button>
+            <button type="button" role="radio" aria-checked="false" data-value="trail">Trail</button>
+            <button type="button" role="radio" aria-checked="false" data-value="scooter">Scooter</button>
+            <button type="button" role="radio" aria-checked="false" data-value="esportiva">Esportiva</button>
+          </div>
+        </div>
+      </div>
+
+      <ul class="grid wrap" data-grid data-reveal="list"></ul>
+
+      <div class="empty wrap" data-empty hidden>
+        <p class="empty__title">Nenhuma moto com esses filtros agora.</p>
+        <p>O estoque muda toda semana. Diga o que você procura e a gente avisa quando chegar.</p>
+        <div class="empty__actions">
+          <button class="btn btn--solid" type="button" data-open-lojas data-msg="Olá! Estou procurando uma moto que não achei no site. Podem me avisar quando chegar?">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Pedir no WhatsApp
+          </button>
+          <button class="btn btn--ghost" type="button" data-reset>Limpar filtros</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINANCIAMENTO ============ -->
+    <section class="fin" id="financiamento" aria-labelledby="fin-titulo">
+      <div class="fin__inner wrap">
+        <div class="fin__copy">
+          <h2 class="display display--lg" id="fin-titulo" data-reveal="wipe">Sai de moto,<br>paga aos poucos</h2>
+          <p>Conte qual moto você quer e quanto tem de entrada. A equipe faz a simulação com você pelo WhatsApp e explica cada passo da análise de crédito.</p>
+          <ul class="fin__steps">
+            <li><strong>Você manda</strong> moto, entrada e loja.</li>
+            <li><strong>A loja simula</strong> as parcelas com você.</li>
+            <li><strong>Aprovou,</strong> é só buscar a moto.</li>
+          </ul>
+        </div>
+
+        <form class="form panel" data-form="fin" data-reveal="rise" novalidate>
+          <div class="field">
+            <label for="fin-nome">Seu nome</label>
+            <input id="fin-nome" name="nome" autocomplete="given-name" required>
+            <p class="field__err" id="fin-nome-err" hidden>Escreva seu nome para a equipe saber com quem fala.</p>
+          </div>
+          <div class="field">
+            <label for="fin-moto">Moto de interesse</label>
+            <select id="fin-moto" name="moto" data-moto-select></select>
+          </div>
+          <div class="field">
+            <label for="fin-entrada">Entrada <span class="opt">opcional</span></label>
+            <div class="money"><span aria-hidden="true">R$</span><input id="fin-entrada" name="entrada" inputmode="numeric" placeholder="2.000" data-money></div>
+          </div>
+          <fieldset class="field">
+            <legend>Loja</legend>
+            <div class="pick" data-loja-pick="fin"></div>
+          </fieldset>
+          <button class="btn btn--solid btn--block" type="submit">
+            <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Simular pelo WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ VENDER / TROCA ============ -->
+    <section class="sell wrap" id="vender" aria-labelledby="sell-titulo">
+      <div class="sell__copy">
+        <h2 class="display display--lg" id="sell-titulo" data-reveal="wipe">Sua moto<br>vale negócio</h2>
+        <p>A Hildo compra, pega na troca ou vende a sua moto em consignação. Mande modelo, ano e quilometragem e receba a avaliação da equipe.</p>
+      </div>
+      <form class="form form--inline" data-form="sell" data-reveal="rise" novalidate>
+        <div class="field">
+          <label for="sell-modelo">Modelo</label>
+          <input id="sell-modelo" name="modelo" placeholder="Ex.: CG 160 Fan" required>
+          <p class="field__err" id="sell-modelo-err" hidden>Diga qual é a moto para a avaliação.</p>
+        </div>
+        <div class="field field--s">
+          <label for="sell-ano">Ano</label>
+          <input id="sell-ano" name="ano" inputmode="numeric" maxlength="4" placeholder="2021">
+        </div>
+        <div class="field field--s">
+          <label for="sell-km">Km</label>
+          <input id="sell-km" name="km" inputmode="numeric" placeholder="25.000" data-money>
+        </div>
+        <fieldset class="field field--full">
+          <legend>O que você quer fazer?</legend>
+          <div class="pick pick--inline">
+            <label class="chip"><input type="radio" name="tipo" value="vender" checked> Vender</label>
+            <label class="chip"><input type="radio" name="tipo" value="trocar"> Trocar por outra</label>
+            <label class="chip"><input type="radio" name="tipo" value="consignar"> Deixar em consignação</label>
+          </div>
+        </fieldset>
+        <button class="btn btn--solid" type="submit">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Pedir avaliação
+        </button>
+      </form>
+    </section>
+
+    <!-- ============ LOJAS ============ -->
+    <section class="lojas" id="lojas" aria-labelledby="lojas-titulo">
+      <div class="lojas__media" data-reveal="door">
+        <img src="assets/img/fachada.jpg" alt="" loading="lazy">
+        <span class="stage__tag">Imagem ilustrativa</span>
+      </div>
+      <div class="lojas__body wrap">
+        <h2 class="display display--lg" id="lojas-titulo" data-reveal="wipe">Duas lojas<br>em São Luís</h2>
+        <div class="lojas__list" data-lojas-list></div>
+      </div>
+    </section>
+
+    <!-- ============ INSTAGRAM ============ -->
+    <section class="insta wrap" aria-label="Instagram">
+      <p class="insta__line"><span class="num">50 mil</span> pessoas acompanham o estoque chegando no Instagram.</p>
+      <a class="btn btn--ghost" href="https://www.instagram.com/hildo_motos/" target="_blank" rel="noopener">
+        <svg class="ico" aria-hidden="true"><use href="#i-ig"/></svg> Seguir @hildo_motos
+      </a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__top">
+      <p class="footer__mark" aria-hidden="true">Hildo Motos</p>
+    </div>
+    <div class="wrap footer__bottom">
+      <p>A loja diferente das iguais. Compra · Venda · Consignação · Financiamento.</p>
+      <p>Imagens ilustrativas. Estoque e condições sujeitos a alteração; confirme com a loja.</p>
+    </div>
+  </footer>
+
+  <!-- Barra fixa no celular -->
+  <div class="dock" data-dock>
+    <button class="btn btn--solid btn--block" type="button" data-open-lojas>
+      <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Falar no WhatsApp
+    </button>
+  </div>
+
+  <!-- ============ DETALHE DA MOTO ============ -->
+  <dialog class="drawer" data-drawer aria-labelledby="drawer-title">
+    <div class="drawer__inner">
+      <button class="icon-btn drawer__close" type="button" data-close aria-label="Fechar">
+        <svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>
+      </button>
+      <div class="gal" data-gal>
+        <div class="gal__track" data-gal-track tabindex="0" role="region" aria-label="Fotos da moto"></div>
+        <button class="gal__nav gal__nav--prev" type="button" data-gal-prev aria-label="Foto anterior">
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </button>
+        <button class="gal__nav gal__nav--next" type="button" data-gal-next aria-label="Próxima foto">
+          <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </button>
+        <span class="gal__count num" data-gal-count aria-live="polite"></span>
+        <span class="stage__tag" data-d-tag>Imagem ilustrativa</span>
+      </div>
+      <div class="gal__thumbs" data-gal-thumbs></div>
+      <div class="drawer__body">
+        <p class="badge" data-d-cond></p>
+        <h2 class="drawer__title" id="drawer-title"><span data-d-marca></span> <strong data-d-modelo></strong></h2>
+        <p class="drawer__price num" data-d-preco></p>
+        <dl class="specs num" data-d-specs></dl>
+
+        <form class="form" id="moto-form" data-form="moto" novalidate>
+          <fieldset class="field">
+            <legend>Falar com qual loja?</legend>
+            <div class="pick" data-loja-pick="moto"></div>
+          </fieldset>
+          <label class="check"><input type="checkbox" name="financiar"> Quero simular financiamento</label>
+          <label class="check"><input type="checkbox" name="troca"> Tenho moto para dar de entrada</label>
+        </form>
+        <button class="link-btn" type="button" data-share>
+          <svg class="ico" aria-hidden="true"><use href="#i-share"/></svg> <span data-share-label>Compartilhar esta moto</span>
+        </button>
+      </div>
+      <div class="drawer__cta">
+        <button class="btn btn--solid btn--block" type="submit" form="moto-form">
+          <svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Chamar no WhatsApp
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============ ESCOLHA DE LOJA ============ -->
+  <dialog class="sheet" data-sheet aria-labelledby="sheet-title">
+    <div class="sheet__inner">
+      <div class="sheet__head">
+        <h2 id="sheet-title">Falar com qual loja?</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Fechar">
+          <svg class="ico" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+      <div class="sheet__list" data-sheet-list></div>
+    </div>
+  </dialog>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35M12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.42 9.42 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43a9.4 9.4 0 0 1 6.67 2.77 9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43m8.03-17.46A11.3 11.3 0 0 0 12.05.7C5.79.7.7 5.79.7 12.04c0 2 .52 3.95 1.52 5.67L.6 23.6l6.02-1.58a11.3 11.3 0 0 0 5.42 1.38h.01c6.25 0 11.34-5.09 11.35-11.35 0-3.03-1.18-5.88-3.32-8.02"/></symbol>
+    <symbol id="i-mark" viewBox="0 0 48 56"><g fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="miter" stroke-linecap="square"><path d="M3 3h42v27c0 12-10 19-21 23C13 49 3 42 3 30z"/><path d="M13 18V9l6 5 5-7 5 7 6-5v9z"/><path d="M13 24v16M13 32h8M21 24v16M27 40V24l4 8 4-8v16"/></g></symbol>
+    <symbol id="i-photos" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="14" height="13"/><path d="M7 3h14v13"/></g></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" d="M5 12h13M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" d="M12 3v12M7 8l5-5 5 5M5 14v6h14v-6"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+  </svg>
+
+  <script src="data/estoque.js?v=19"></script>
+  <script src="js/main.js?v=19"></script>
+</body>
+</html>
